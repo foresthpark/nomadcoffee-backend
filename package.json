@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "npx prisma migrate dev --preview-feature",
+    "studio": "npx prisma studio",
+    "postinstall": "npx basetag link"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +19,20 @@
   "bugs": {
     "url": "https://github.com/foresthpark/nomadcoffee-backend/issues"
   },
-  "homepage": "https://github.com/foresthpark/nomadcoffee-backend#readme"
+  "homepage": "https://github.com/foresthpark/nomadcoffee-backend#readme",
+  "dependencies": {
+    "@prisma/client": "^3.1.1",
+    "apollo-server": "^3.3.0",
+    "dotenv": "^10.0.0",
+    "graphql": "^15.6.0",
+    "graphql-tools": "^7.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "basetag": "^2.0.1",
+    "nodemon": "^2.0.13",
+    "prisma": "^3.1.1"
+  }
 }
