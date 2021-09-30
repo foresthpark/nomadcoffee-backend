@@ -1,9 +1,10 @@
-import client from "../client";
-import bcrypt from "bcrypt";
-
 export default {
   Mutation: {
-    createAccount: async (_, { username, email, password, name, ...rest }) => {
+    createAccount: async (
+      _,
+      { username, email, password, name, ...rest },
+      { client }
+    ) => {
       const user = await client.user.findFirst({
         where: {
           OR: [{ email }, { username }],

@@ -14,24 +14,8 @@ export default gql`
     updatedAt: String!
   }
 
-  type Updated {
+  interface Success {
     ok: Boolean!
     error: String
-  }
-
-  type Mutation {
-    createAccount(
-      username: String!
-      email: String!
-      password: String!
-      name: String!
-      location: String
-      avatarUrl: String
-      githubUsername: String
-    ): Updated
-  }
-
-  type Query {
-    getUserById(username: String!): User
   }
 `;
