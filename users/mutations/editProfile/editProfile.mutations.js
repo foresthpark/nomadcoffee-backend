@@ -1,9 +1,9 @@
 import bcrypt from "bcrypt";
-import { protectdResolver } from "../../user.utilities";
+import { protectedResolver } from "../../user.utilities";
 
 export default {
   Mutation: {
-    editProfile: protectdResolver(
+    editProfile: protectedResolver(
       async (
         _,
         {
