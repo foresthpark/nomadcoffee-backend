@@ -10,8 +10,15 @@ export default gql`
     location: String
     avatarUrl: String
     githubUsername: String
+    following: [User]
+    followers: [User]
     createdAt: String!
     updatedAt: String!
+    totalFollowers: Int!
+    totalFollowing: Int!
+    isFollowing: Boolean!
+    isMe: Boolean!
+    isFollowingUser: Boolean!
   }
 
   interface Success {
