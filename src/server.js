@@ -5,6 +5,7 @@ import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-co
 import client from "./client.js";
 import { resolvers, typeDefs } from "./schema.js";
 import { getUser } from "./users/user.utilities";
+const PORT = process.env.PORT || 5000;
 
 const server = new ApolloServer({
   context: async ({ req }) => {
@@ -18,8 +19,6 @@ const server = new ApolloServer({
   introspection: true,
   plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
 });
-
-const PORT = process.env.PORT;
 
 server
   .listen()
