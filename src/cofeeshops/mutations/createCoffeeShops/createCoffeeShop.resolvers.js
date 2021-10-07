@@ -1,5 +1,6 @@
 import { protectedResolver } from "../../../users/user.utilities";
 import slug from "slug";
+import { createWriteStream } from "fs";
 
 export default {
   Mutation: {
