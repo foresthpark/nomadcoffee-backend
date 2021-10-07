@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+import regeneratorRuntime from "regenerator-runtime";
 import { ApolloServer } from "apollo-server";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import client from "./client.js";
