@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "dev": "nodemon --exec babel-node src/server --delay 1",
     "migrate": "npx prisma migrate dev --preview-feature",
     "studio": "npx prisma studio",
@@ -45,5 +46,8 @@
     "basetag": "^2.0.1",
     "nodemon": "^2.0.13",
     "prisma": "^3.1.1"
+  },
+  "resolutions": {
+    "regenerator-runtime": "^0.13.9"
   }
 }
