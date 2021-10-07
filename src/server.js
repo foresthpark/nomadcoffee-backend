@@ -4,7 +4,7 @@ import { ApolloServer } from "apollo-server";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import client from "./client.js";
 import { resolvers, typeDefs } from "./schema.js";
-import { getUser } from "./resolvers/users/user.utilities.js";
+import { getUser } from "./users/user.utilities";
 
 const server = new ApolloServer({
   context: async ({ req }) => {

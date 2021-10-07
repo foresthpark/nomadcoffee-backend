@@ -1,4 +1,3 @@
-import client from "../../../../client";
 import { protectedResolver } from "../../../users/user.utilities";
 import slug from "slug";
 
@@ -8,7 +7,8 @@ export default {
       async (
         _,
         { name, latitude, longitude, photos: shopPhotos, categories },
-        { loggedInUser }
+        { loggedInUser },
+        { client }
       ) => {
         let categoriesObjs = null;
         if (categories) {

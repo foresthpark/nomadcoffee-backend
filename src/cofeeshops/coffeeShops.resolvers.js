@@ -1,8 +1,6 @@
-import client from "../../client";
-
 export default {
   CoffeeShop: {
-    categories: ({ id }, { lastId }) =>
+    categories: ({ id }, { lastId }, { client }) =>
       client.coffeeShop
         .findUnique({
           where: { id },
