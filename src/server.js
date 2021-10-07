@@ -23,7 +23,5 @@ const PORT = process.env.PORT;
 server
   .listen()
   .then(() =>
-    console.log(
-      `🚀🚀🚀🚀🚀🚀🚀🚀 Server ready at http://localhost:${PORT} 🚀🚀🚀🚀🚀🚀🚀🚀`
-    )
+    console.log(`🚀🚀🚀🚀 Server ready at http://localhost:${PORT} 🚀🚀🚀🚀`)
   );
