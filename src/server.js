@@ -21,7 +21,7 @@ const server = new ApolloServer({
 });
 
 server
-  .listen()
+  .listen(PORT, "0.0.0.0")
   .then(() =>
     console.log(`🚀🚀🚀🚀 Server ready at http://localhost:${PORT} 🚀🚀🚀🚀`)
   );
