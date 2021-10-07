@@ -9,7 +9,7 @@
     "studio": "npx prisma studio",
     "postinstall": "npx basetag link",
     "build": "babel src --out-dir build",
-    "start": "node build/server"
+    "start": "babel-node build/server"
   },
   "keywords": [],
   "author": "",
