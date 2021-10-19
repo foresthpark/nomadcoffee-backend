@@ -2,7 +2,7 @@ import client from "../client";
 
 export default {
   User: {
-    totalFollowing: ({ id }, { client }) =>
+    totalFollowing: ({ id }, _, { client }) =>
       client.user.count({
         where: {
           followers: {
@@ -12,7 +12,7 @@ export default {
           },
         },
       }),
-    totalFollowers: ({ id }, { client }) =>
+    totalFollowers: ({ id }, _, { client }) =>
       client.user.count({
         where: {
           following: {
@@ -22,7 +22,7 @@ export default {
           },
         },
       }),
-    isMe: ({ id }, args, { loggedInUser, client }) => {
+    isMe: ({ id }, _, { loggedInUser, client }) => {
       if (!loggedInUser) return false;
       return loggedInUser.id === id;
     },
