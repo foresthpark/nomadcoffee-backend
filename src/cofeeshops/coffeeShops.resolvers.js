@@ -25,7 +25,7 @@ export default {
         skip: lastId ? 1 : 0,
         ...(lastId && { cursor: { id: lastId } }),
       }),
-    totalShops: ({ id }, { client }) =>
+    totalShops: ({ id }, _, { client }) =>
       client.coffeeShop.count({
         where: {
           categories: {
