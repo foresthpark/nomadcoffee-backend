@@ -8,8 +8,7 @@ export default {
       async (
         _,
         { name, latitude, longitude, photos: shopPhotos, categories },
-        { loggedInUser },
-        { client }
+        { loggedInUser, client }
       ) => {
         let categoriesObjs = null;
         if (categories) {
