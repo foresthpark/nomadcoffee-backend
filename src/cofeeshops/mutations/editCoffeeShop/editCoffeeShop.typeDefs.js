@@ -5,8 +5,8 @@ export default gql`
     editCoffeeShop(
       id: Int!
       name: String
-      latitude: String
-      longitude: String
+      latitude: Float
+      longitude: Float
       photos: [String]
       categories: [String]
     ): Success
