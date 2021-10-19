@@ -3,7 +3,7 @@ export default {
     editCoffeeShop: async (
       parent,
       { id, name, latitude, longitude, photos, categories },
-      { loggedInUser }
+      { loggedInUser, client }
     ) => {
       const coffeeShop = await client.coffeeShop.findUnique({
         where: {

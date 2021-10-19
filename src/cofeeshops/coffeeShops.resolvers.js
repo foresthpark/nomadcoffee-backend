@@ -12,7 +12,7 @@ export default {
         }),
   },
   Category: {
-    shops: ({ id }, { lastId }) =>
+    shops: ({ id }, { lastId }, { client }) =>
       client.coffeeShop.findMany({
         where: {
           categories: {
@@ -25,7 +25,7 @@ export default {
         skip: lastId ? 1 : 0,
         ...(lastId && { cursor: { id: lastId } }),
       }),
-    totalShops: ({ id }) =>
+    totalShops: ({ id }, { client }) =>
       client.coffeeShop.count({
         where: {
           categories: {
